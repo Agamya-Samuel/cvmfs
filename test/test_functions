@@ -790,7 +790,7 @@ create_repo() {
 
   # mkfs refuses to overwrite existing manifest
   if [ -f "${CVMFS_TEST_S3_STORAGE}/${CVMFS_TEST_REPO}/.cvmfspublished" ]; then
-    rm "${CVMFS_TEST_S3_STORAGE}/${CVMFS_TEST_REPO}/.cvmfspublished"
+    sudo rm "${CVMFS_TEST_S3_STORAGE}/${CVMFS_TEST_REPO}/.cvmfspublished"
   fi
 
   echo -n "Creating new repository $repo (with extra options "$@") ..."
