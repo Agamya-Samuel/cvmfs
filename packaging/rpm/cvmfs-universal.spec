@@ -105,6 +105,9 @@ BuildRequires: fuse3-devel
 %endif
 BuildRequires: libattr-devel
 BuildRequires: openssl-devel
+%if 0%{?fedora} >= 41
+BuildRequires: openssl-devel-engine
+%endif
 BuildRequires: patch
 BuildRequires: pkgconfig
 BuildRequires: %{cvmfs_python_devel}
