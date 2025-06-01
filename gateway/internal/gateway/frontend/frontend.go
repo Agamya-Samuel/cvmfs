@@ -50,6 +50,10 @@ func NewFrontend(services be.ActionController, port int, timeout time.Duration) 
 	// Payloads (new and improved)
 	router.POST(APIRoot+"/payloads/:token", mw(MakePayloadsHandler(services)))
 
+  // tarball submission for bits build tool
+	router.POST(APIRoot+"/bits", MakeBitsHandler(services)) //todo: re-enable mw
+
+
 	// Notification system endpoints
 	router.POST(APIRoot+"/notifications/publish", tag(MakeNotificationsHandler(services)))
 	router.GET(APIRoot+"/notifications/subscribe", tag(MakeNotificationsHandler(services)))
