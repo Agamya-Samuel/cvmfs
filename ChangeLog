@@ -1,6 +1,7 @@
 
-2.14:
+2.13.2:
   * [server] Change gc -a to only do repos where gc was run on the stratum0 (#3895)
+  * snapshot: Avoid recursion into history (#3846)
 
 2.13.1:
   * [client] Fix mount options that can lead to "futimes" error with docker (#3872)
